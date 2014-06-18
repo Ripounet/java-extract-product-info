@@ -2,6 +2,8 @@ package fr.deleplace.valentin.extraction;
 
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 /**
  * POJO bean to hold product values.
  * 
@@ -23,6 +25,32 @@ public class ProductFields {
 				+ ", brand=" + brand + ", manufacturer=" + manufacturer
 				+ ", number=" + number + ", shortDescription="
 				+ shortDescription + ", categories=" + categories + "]";
+	}
+
+	public String flatFormat() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Title: ");
+		sb.append(StringUtils.defaultString(title));
+		sb.append("\n");
+		sb.append("Price: ");
+		sb.append(StringUtils.defaultString(price));
+		sb.append("\n");
+		sb.append("Brand: ");
+		sb.append(StringUtils.defaultString(brand));
+		sb.append("\n");
+		sb.append("Manufacturer: ");
+		sb.append(StringUtils.defaultString(manufacturer));
+		sb.append("\n");
+		sb.append("Number: ");
+		sb.append(StringUtils.defaultString(number));
+		sb.append("\n");
+		sb.append("Short description: ");
+		sb.append(StringUtils.defaultString(shortDescription));
+		sb.append("\n");
+		sb.append("Categories: ");
+		sb.append(StringUtils.join(categories,", "));
+		sb.append("\n");
+		return sb.toString();
 	}
 
 	public String getTitle() {

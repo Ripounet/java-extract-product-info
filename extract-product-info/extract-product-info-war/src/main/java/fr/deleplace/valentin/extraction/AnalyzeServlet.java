@@ -2,6 +2,7 @@ package fr.deleplace.valentin.extraction;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Arrays;
@@ -26,7 +27,10 @@ public class AnalyzeServlet extends HttpServlet {
     Process process = new Process();
     ProductFields results = process.fetchAndExtract(targetURL);
 
-    resp.getWriter().print(results);
+    PrintWriter out = resp.getWriter();
+    out.print("<pre>");
+	out.print(results.flatFormat());
+	out.print("</pre>");
   }
   
 }
