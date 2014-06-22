@@ -24,4 +24,12 @@ public class ProductWebService {
         return results.flatFormat();
     }
 	
+	@Path("/json")
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public ProductFields productJson() throws IOException {
+	    String targetURL = "http://www.etronics.com/coby-cve56blu-jammerz-moods-colorful-isolation-stereo-earphones-blue.html";
+	    ProductFields results = process.fetchAndExtract(targetURL);
+        return results;
+	}
 }

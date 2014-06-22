@@ -2,6 +2,8 @@ package fr.deleplace.valentin.extraction;
 
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -9,6 +11,7 @@ import org.apache.commons.lang3.StringUtils;
  * 
  * @author valentindeleplace
  */
+@XmlRootElement
 public class ProductFields {
 
 	private String title;
