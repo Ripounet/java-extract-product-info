@@ -1,22 +1,14 @@
-package fr.deleplace.valentin.extraction;
+package fr.deleplace.valentin.extraction.servlet;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintWriter;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.Arrays;
-import java.util.List;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.io.IOUtils;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
+import fr.deleplace.valentin.extraction.Process;
+import fr.deleplace.valentin.extraction.ProductFields;
 
 public class AnalyzeServlet extends HttpServlet {
 	

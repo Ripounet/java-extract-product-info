@@ -3,7 +3,7 @@
 
     <servlet>
         <servlet-name>analyze</servlet-name>
-        <servlet-class>fr.deleplace.valentin.extraction.AnalyzeServlet</servlet-class>
+        <servlet-class>fr.deleplace.valentin.extraction.servlet.AnalyzeServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>analyze</servlet-name>
