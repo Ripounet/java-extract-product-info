@@ -8,17 +8,17 @@ import org.jsoup.nodes.Document;
 
 public class Process {
 
-	ProductFields fetchAndExtract(String url) throws IOException {
+	public ProductFields fetchAndExtract(String url) throws IOException {
 		Document doc = Jsoup.connect(url).get();
 		return extract(doc);
 	}
 
-	ProductFields extractFromStream(InputStream in, String charset, String baseUrl) throws IOException {
+	public ProductFields extractFromStream(InputStream in, String charset, String baseUrl) throws IOException {
 		Document doc = Jsoup.parse(in, charset, baseUrl);
 		return extract(doc);
 	}
 
-	ProductFields extract(Document doc) throws IOException {
+	public ProductFields extract(Document doc) throws IOException {
 		ProductFields f = new ProductFields();
 
 		f.setTitle(Extractors.TITLE.extract(doc));
