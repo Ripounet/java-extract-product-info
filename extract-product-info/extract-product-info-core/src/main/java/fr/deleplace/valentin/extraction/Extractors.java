@@ -8,7 +8,21 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+/**
+ * Define the behavior of each extractor (1 extactor for each field).
+ * 
+ * Field values may have differents types (String, List<String>, etc.).
+ * 
+ * Extractors work on JSoup document tree and use jQuery-like selectors.
+ * 
+ * String fields are set to null when not found in html document.
+ * 
+ * List<String> field is set to empty list when no item is found in html document.
+ * 
+ * @author valentindeleplace
+ */
 public class Extractors {
+	
 	public static final FieldExtractor<String> TITLE = new FieldExtractor<String>() {
 		public String extract(Document doc) {
 			 Elements selection = doc.select(".product-name h1");
@@ -75,6 +89,12 @@ public class Extractors {
 		}
 	};
 
+	/**
+	 * Categories are extracted from breadcrumb : each item having a "category-like"
+	 * css class.
+	 * 
+	 * This finds all breadcrumb items except "Home" and the Product name itself.
+	 */
 	public static final FieldExtractor<List<String>> CATEGORIES = new FieldExtractor<List<String>>() {
 		public List<String> extract(Document doc) {
 			List<String> cats = new ArrayList<>();

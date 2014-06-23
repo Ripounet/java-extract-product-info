@@ -7,6 +7,11 @@ import java.io.InputStream;
 
 import org.junit.Test;
 
+/**
+ * Check the extraction output from a sample html file.
+ * 
+ * @author valentindeleplace
+ */
 public class ProcessTest {
 
 	@Test
