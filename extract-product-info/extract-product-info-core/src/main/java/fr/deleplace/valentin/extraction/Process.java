@@ -77,7 +77,7 @@ public class Process {
 			problemFieldNames.add("Short description");
 		}
 		if(f.getCategories().isEmpty()){
-			anomalyScore += 10;
+			anomalyScore += 8;
 			problemFieldNames.add("Categories");
 		}
 		
