@@ -1,9 +1,10 @@
-package fr.deleplace.valentin.extraction.cmd;
+package fr.deleplace.valentin.extraction;
 
 import java.io.IOException;
 
 import org.apache.commons.lang3.StringUtils;
 
+import toto.Dummy;
 import fr.deleplace.valentin.extraction.Process;
 import fr.deleplace.valentin.extraction.ProductFields;
 
@@ -22,6 +23,7 @@ public class Analyze {
 		} catch (IOException e) {
 			System.err.println("Networking problem :" + e.getMessage());
 		}
+		System.out.println(Dummy.TOTO);
 	}
 
 }

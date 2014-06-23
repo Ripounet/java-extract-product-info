@@ -41,5 +41,7 @@
   <modules>
     <module>extract-product-info-war</module>
     <module>extract-product-info-ear</module>
+    <module>extract-product-info-cli</module>
+    <module>extract-product-info-core</module>
   </modules>
 </project>

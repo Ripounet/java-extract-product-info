@@ -1,5 +1,6 @@
 package fr.deleplace.valentin.extraction;
 
+
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlRootElement;
